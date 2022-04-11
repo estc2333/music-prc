@@ -18,7 +18,8 @@
       </div>
     </nav>
   </header>
-
+  Counter: {{ Counter }}
+  PlusOne: {{ PlusOne }}
   <!-- Introduction -->
   <section class="mb-8 py-20 text-white text-center relative">
     <div class="absolute inset-0 w-full h-full bg-contain introduction-bg"
@@ -403,3 +404,19 @@
     </div>
   </div>
 </template>
+
+<script>
+import { ref, computed } from 'vue';
+
+export default {
+  name: 'music',
+  setup() {
+    const Counter = ref(0);
+    const PlusOne = computed(() => Counter.value + 1);
+    return {
+      Counter,
+      PlusOne,
+    };
+  },
+};
+</script>
