@@ -256,7 +256,7 @@
       </div>
     </div>
   </div>
-  <auth v-if="showAuth" />
+  <auth />
 </template>
 
 <script>
