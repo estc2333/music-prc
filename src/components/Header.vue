@@ -9,7 +9,7 @@
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
           <li>
-            <a class="px-2 text-white" href="#" @click="checkAuth">Login / Register</a>
+            <a class="px-2 text-white" href="#" @click="toggleAuthModal">Login / Register</a>
           </li>
           <li>
             <a class="px-2 text-white" href="#">Manage</a>
@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
   name: 'HelloWorld',
   props: {
@@ -34,6 +36,9 @@ export default {
     return {
       checkAuth,
     };
+  },
+  methods: {
+    ...mapMutations(['toggleAuthModal']),
   },
 };
 </script>
